@@ -1,1 +1,0 @@
-# Agrowth Livestock - Withholding Rule

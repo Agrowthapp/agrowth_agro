@@ -1,20 +1,10 @@
-from frappe.boot import get_bootinfo
-
-
 def get_data():
     return [
         {
-            "module_name": "Livestock",
-            "color": "green",
-            "icon": "fa fa-leanpub",
-            "type": "module",
-            "label": "Ganaderia"
-        },
-        {
-            "module_name": "Agro",
+            "module_name": "Agrowth Agro",
             "color": "green",
             "icon": "fa fa-leaf",
             "type": "module",
-            "label": "Agrowth Agro"
+            "label": "Agro",
         }
     ]
