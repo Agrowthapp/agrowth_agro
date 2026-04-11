@@ -51,7 +51,12 @@ def calculate_withholdings(doc, base_amount, counterparty_type="Supplier"):
     except frappe.DoesNotExistError:
         frappe.msgprint(_("Withholding Profile {0} not found").format(profile_name))
         return withholdings
-    
+
+    doc_company = getattr(doc, "company", None)
+    if doc_company and profile.company and profile.company != doc_company:
+        frappe.msgprint(_("Withholding Profile {0} does not belong to this company").format(profile_name))
+        return withholdings
+
     # Check if profile is active
     if not profile.is_active:
         return withholdings
