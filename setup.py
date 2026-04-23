@@ -5,8 +5,8 @@ with open("requirements.txt") as f:
 
 setup(
 	name="agrowth_agro",
-	version="0.0.1",
-	description="Módulo ganadero para ERPNext",
+	version="0.1.0",
+	description="Módulo de agricultura para ERPNext",
 	author="Agrowth",
 	author_email="info@agrowth.app",
 	packages=find_packages(),

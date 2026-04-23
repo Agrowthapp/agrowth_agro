@@ -3,7 +3,7 @@ from . import __version__ as app_version
 app_name = "agrowth_agro"
 app_title = "Agrowth Agro"
 app_publisher = "Agrowth"
-app_description = "Módulo ganadero para ERPNext - Compras, ventas, stock y trazabilidad de ganado"
+app_description = "Módulo de agricultura para ERPNext - Campos, lotes, campañas y operaciones agrícolas"
 app_icon = "fa fa-leanpub"
 app_color = "green"
 app_email = "info@agrowth.app"
@@ -15,6 +15,17 @@ docevents = {
     "*": {
         "on_update": "agrowth_agro.utils.tracking.track_modification",
     }
+}
+
+doc_events = {
+    "Agro Field": {
+        "after_insert": "agrowth_agro.utils.warehouse_sync.on_field_after_insert",
+        "after_rename": "agrowth_agro.utils.warehouse_sync.on_field_after_rename",
+        "on_trash": "agrowth_agro.utils.warehouse_sync.on_field_on_trash",
+    },
+    "Agro Location": {
+        "after_insert": "agrowth_agro.utils.warehouse_sync.on_location_after_insert",
+    },
 }
 
 # Includes in <head>

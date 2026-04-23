@@ -1,0 +1,1 @@
+agrowth_agro.patches.remove_lot_campaign_link
