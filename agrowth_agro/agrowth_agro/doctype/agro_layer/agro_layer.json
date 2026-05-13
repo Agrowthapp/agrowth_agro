@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "autoname": "LAYER-.####",
+ "creation": "2026-04-08 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "layer_name",
+  "lot",
+  "layer_type",
+  "column_break_1",
+  "source_type",
+  "source_section",
+  "file_url",
+  "wms_url",
+  "metadata",
+  "company_section",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "layer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre de Capa",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lote",
+   "options": "Agro Lot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "layer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo de Capa",
+   "options": "ndvi\nsoil\nyield\ncustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_type",
+   "fieldtype": "Select",
+   "label": "Fuente",
+   "options": "file_upload\nexternal_wms\nsentinel_hub",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Origen de Datos"
+  },
+  {
+   "fieldname": "file_url",
+   "fieldtype": "Data",
+   "label": "URL Archivo (S3)"
+  },
+  {
+   "fieldname": "wms_url",
+   "fieldtype": "Data",
+   "label": "URL WMS / Tiles"
+  },
+  {
+   "fieldname": "metadata",
+   "fieldtype": "Long Text",
+   "label": "Metadatos (JSON)"
+  },
+  {
+   "fieldname": "company_section",
+   "fieldtype": "Section Break",
+   "label": "Empresa"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "module": "Agrowth Agro",
+ "name": "Agro Layer",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

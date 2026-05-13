@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "autoname": "ZONE-.####",
+ "creation": "2026-04-08 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "zone_name",
+  "lot",
+  "zone_type",
+  "column_break_1",
+  "area_ha",
+  "geojson",
+  "company_section",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "zone_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre de Zona",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lote",
+   "options": "Agro Lot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "zone_type",
+   "fieldtype": "Data",
+   "label": "Tipo de Zona"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area_ha",
+   "fieldtype": "Float",
+   "label": "Área (ha)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "geojson",
+   "fieldtype": "Long Text",
+   "label": "GeoJSON"
+  },
+  {
+   "fieldname": "company_section",
+   "fieldtype": "Section Break",
+   "label": "Empresa"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "module": "Agrowth Agro",
+ "name": "Agro Zone",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

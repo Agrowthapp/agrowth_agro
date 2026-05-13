@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "autoname": "CAMPLOT-.####",
+ "creation": "2026-04-08 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "campaign",
+  "lot",
+  "column_break_1",
+  "state",
+  "color_key",
+  "crop_section",
+  "crop",
+  "variety",
+  "notes_section",
+  "notes",
+  "company_section",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Campaña",
+   "options": "Agro Campaign",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lote",
+   "options": "Agro Lot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "default": "planificado",
+   "in_list_view": 1,
+   "label": "Estado del Lote",
+   "options": "planificado\nsembrado\nen_desarrollo\ncosechado\nbarbecho",
+   "reqd": 1
+  },
+  {
+   "fieldname": "color_key",
+   "fieldtype": "Color",
+   "label": "Color en Mapa"
+  },
+  {
+   "fieldname": "crop_section",
+   "fieldtype": "Section Break",
+   "label": "Cultivo"
+  },
+  {
+   "fieldname": "crop",
+   "fieldtype": "Data",
+   "label": "Cultivo"
+  },
+  {
+   "fieldname": "variety",
+   "fieldtype": "Data",
+   "label": "Variedad"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notas"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notas"
+  },
+  {
+   "fieldname": "company_section",
+   "fieldtype": "Section Break",
+   "label": "Empresa"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "module": "Agrowth Agro",
+ "name": "Ag Campaign Lot",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
