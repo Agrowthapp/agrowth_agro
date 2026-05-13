@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "creation": "2026-04-08 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "service_name",
+  "column_break_1",
+  "dose",
+  "uom",
+  "cost_section",
+  "quantity_total",
+  "cost_total",
+  "cost_per_ha",
+  "column_break_2",
+  "supplier"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Artículo (ERPNext)",
+   "options": "Item"
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insumo / Servicio",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dose",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Dosis"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "Unidad",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "cost_section",
+   "fieldtype": "Section Break",
+   "label": "Costos"
+  },
+  {
+   "fieldname": "quantity_total",
+   "fieldtype": "Float",
+   "label": "Cantidad Total"
+  },
+  {
+   "fieldname": "cost_total",
+   "fieldtype": "Currency",
+   "label": "Costo Total"
+  },
+  {
+   "fieldname": "cost_per_ha",
+   "fieldtype": "Currency",
+   "label": "Costo por ha"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Data",
+   "label": "Proveedor"
+  }
+ ],
+ "istable": 1,
+ "module": "Agrowth Agro",
+ "name": "Ag Operation Item",
+ "permissions": []
+}
