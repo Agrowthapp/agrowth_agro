@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "autoname": "AGOP-.YYYY.-.####",
+ "creation": "2026-04-08 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "campaign_lot",
+  "operation_type",
+  "column_break_1",
+  "date",
+  "performed_by",
+  "items_section",
+  "items",
+  "notes_section",
+  "notes",
+  "company_section",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign_lot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lote de Campaña",
+   "options": "Ag Campaign Lot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo de Operación",
+   "options": "siembra\npulverizacion\nfertilizacion\ncosecha\nlaboreo\notro",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha",
+   "reqd": 1
+  },
+  {
+   "fieldname": "performed_by",
+   "fieldtype": "Data",
+   "label": "Realizado por"
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Insumos y Servicios"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Insumos / Servicios",
+   "options": "Ag Operation Item"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notas"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notas"
+  },
+  {
+   "fieldname": "company_section",
+   "fieldtype": "Section Break",
+   "label": "Empresa"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "module": "Agrowth Agro",
+ "name": "Ag Operation",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "date",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

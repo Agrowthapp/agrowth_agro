@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "autoname": "LOC-.####",
+ "creation": "2026-04-08 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "location_name",
+  "field",
+  "location_type",
+  "column_break_1",
+  "status",
+  "code",
+  "parent_location",
+  "capacity_section",
+  "capacity",
+  "uom",
+  "geometry_section",
+  "geometry_json",
+  "company_section",
+  "company",
+  "warehouse_section",
+  "warehouse_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "location_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "field",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Campo",
+   "options": "Agro Field",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo",
+   "options": "galpon\nsilo\npatio\ntanque\ncorral\ndeposito_insumos\ndeposito_repuestos\ntaller",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "default": "active",
+   "label": "Estado",
+   "options": "active\ninactive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "label": "Código"
+  },
+  {
+   "fieldname": "parent_location",
+   "fieldtype": "Link",
+   "label": "Ubicación Padre",
+   "options": "Agro Location"
+  },
+  {
+   "fieldname": "capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Capacidad"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Float",
+   "label": "Capacidad"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "Unidad",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "geometry_section",
+   "fieldtype": "Section Break",
+   "label": "Geometría"
+  },
+  {
+   "fieldname": "geometry_json",
+   "fieldtype": "Long Text",
+   "label": "GeoJSON"
+  },
+  {
+   "fieldname": "company_section",
+   "fieldtype": "Section Break",
+   "label": "Empresa"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "Depósito"
+  },
+  {
+   "fieldname": "warehouse_id",
+   "fieldtype": "Link",
+   "label": "Depósito ERPNext",
+   "options": "Warehouse",
+   "read_only": 1
+  }
+ ],
+ "module": "Agrowth Agro",
+ "name": "Agro Location",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
