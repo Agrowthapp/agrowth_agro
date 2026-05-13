@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: agrowth_agro
-Version: 0.0.1
-Summary: Módulo ganadero para ERPNext
-Author: Agrowth
-Author-email: info@agrowth.app
-Dynamic: author
-Dynamic: author-email
-Dynamic: summary
