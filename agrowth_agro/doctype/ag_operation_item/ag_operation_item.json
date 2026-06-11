@@ -45,9 +45,8 @@
   },
   {
    "fieldname": "uom",
-   "fieldtype": "Link",
-   "label": "Unidad",
-   "options": "UOM"
+   "fieldtype": "Data",
+   "label": "Unidad"
   },
   {
    "fieldname": "cost_section",

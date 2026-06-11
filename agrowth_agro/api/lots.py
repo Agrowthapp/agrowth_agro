@@ -109,7 +109,7 @@ def get_lot(company_id, lot_id):
 
 
 @frappe.whitelist()
-def create_lot(company_id, name, field_id, geojson=None, status="activo"):
+def create_lot(company_id, name, field_id, geojson=None, area_ha=None, status="activo"):
     doc = frappe.new_doc("Agro Lot")
     doc.company = company_id
     doc.lot_name = name
@@ -118,12 +118,14 @@ def create_lot(company_id, name, field_id, geojson=None, status="activo"):
     if geojson:
         doc.geojson = geojson
         _compute_geometry(doc, geojson)
+    elif area_ha is not None:
+        doc.area_ha = flt(area_ha)
     doc.insert(ignore_permissions=True)
     return _map_lot(frappe.get_doc("Agro Lot", doc.name).as_dict())
 
 
 @frappe.whitelist()
-def update_lot(company_id, lot_id, name=None, field_id=None, geojson=None, status=None):
+def update_lot(company_id, lot_id, name=None, field_id=None, geojson=None, area_ha=None, status=None):
     row = _load_lot(company_id, lot_id)
     if not row:
         frappe.throw(_("Lote no encontrado: {0}").format(lot_id))
@@ -137,6 +139,8 @@ def update_lot(company_id, lot_id, name=None, field_id=None, geojson=None, statu
     if geojson is not None:
         doc.geojson = geojson
         _compute_geometry(doc, geojson)
+    elif area_ha is not None:
+        doc.area_ha = flt(area_ha)
     doc.save(ignore_permissions=True)
     return _map_lot(doc.as_dict())
 

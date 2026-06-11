@@ -77,7 +77,8 @@ def list_operations(company_id, campaign_lot_id=None, campaign_id=None, lot_id=N
         fields=["name", "campaign_lot", "operation_type", "date", "performed_by", "notes"],
         order_by="date desc",
     )
-    return [_map_operation(r) for r in rows]
+    # Load child table items for each operation
+    return [_get_operation_with_items(r.name) for r in rows]
 
 
 @frappe.whitelist()
